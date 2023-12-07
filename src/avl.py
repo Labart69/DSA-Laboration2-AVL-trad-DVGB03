@@ -35,18 +35,24 @@ class AVL(BST):
         return self
 
     def slr(self):
-
         # Performs a single-left rotate around the node rooted at `self`.
 
+        n = self.get_rc()
+        self.set_rc(None)
+        n.set_lc(self)
+
         log.info("TODO@src/avl.py: implement slr()")
-        return self
+        return n
 
     def srr(self):
-
         # Performs a single-right rotate around the node rooted at `self`.
 
+        n = self.get_lc()
+        self.set_lc(None)
+        n.set_rc(self)
+
         log.info("TODO@src/avl.py: implement srr()")
-        return self
+        return n
 
     def dlr(self):
 
