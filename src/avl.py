@@ -17,6 +17,9 @@ class AVL(BST):
         if not self.is_empty():
             self.cons(AVL(), AVL())
 
+    def balance_factor(self):
+        return self.get_lc().height() - self.get_rc().height()
+
     def add(self, v):
 
         # Example which shows how to override and call parent methods.  You
@@ -31,7 +34,7 @@ class AVL(BST):
         # method applies one of the following if necessary: slr, srr, dlr, drr.
 
         log.info("TODO@src/avl.py: implement balance()")
-        self.slr().srr().dlr().drr()  # TODO: apply these methods correctly
+
         return self
 
     def slr(self):

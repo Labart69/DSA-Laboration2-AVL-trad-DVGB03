@@ -95,8 +95,8 @@ class BST(BT):
             cur_node = queue.pop()
             values.append(cur_node.get_value())
 
-            queue.insert(self.get_lc(), 0)
-            queue.insert(self.get_rc(), 0)
+            queue.insert(0, self.get_lc())
+            queue.insert(0, self.get_rc())
 
         return values
 
